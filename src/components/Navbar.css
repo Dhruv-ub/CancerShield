@@ -35,14 +35,16 @@
    */
 
    /* Navbar Styles */
+/*  */
+
+/* General Navbar Styles */
 .navbar {
     background-color: #003366;
-    padding: 15px 30px;
+    padding: 20px 30px;
     position: sticky;
     top: 0;
     z-index: 1000;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   }
   
   .navbar-container {
@@ -53,111 +55,77 @@
     margin: 0 auto;
   }
   
-  /* Logo */
   .logo {
     font-size: 1.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    cursor: pointer;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
   }
   
-  /* Navigation Links */
+  /* Navbar Links */
   .navbar-links {
     display: flex;
+    align-items: center;
     gap: 20px;
   }
   
-  .navbar-links a {
+  .navbar-link {
+    color: white;
     font-size: 1rem;
     font-weight: 500;
-    color: #ffffff;
-    text-decoration: none;
-    padding: 8px 12px;
-    border-radius: 5px;
-    transition: all 0.3s ease-in-out;
-  }
-  
-  .navbar-links a:hover {
-    background-color: #1e90ff;
-    color: #ffffff;
-  }
-  
-  /* Button (optional for login/signup) */
-  .navbar-buttons {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .navbar-buttons .btn {
-    font-size: 1rem;
-    font-weight: 600;
-    padding: 8px 20px;
-    border: none;
-    border-radius: 25px;
     cursor: pointer;
-    transition: all 0.3s ease-in-out;
-    text-transform: uppercase;
+    text-decoration: none;
   }
   
-  .navbar-buttons .btn.primary {
-    background-color: #ffffff;
-    color: #003366;
+  .navbar-link:hover {
+    color: #1e90ff;
   }
   
-  .navbar-buttons .btn.primary:hover {
-    background-color: #1e90ff;
-    color: #ffffff;
+  /* Hamburger Menu */
+  .menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    cursor: pointer;
   }
   
-  .navbar-buttons .btn.secondary {
-    background-color: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+  .menu-toggle .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px 0;
+    background-color: white;
   }
   
-  .navbar-buttons .btn.secondary:hover {
-    background-color: #ffffff;
-    color: #003366;
+  /* Active state when menu is open */
+  .navbar-links.active {
+    display: block;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    background-color: #003366;
+    text-align: center;
   }
   
-  /* Responsive Navbar */
+  .navbar-links.active .navbar-link {
+    padding: 10px 0;
+  }
+  
+  /* For screens smaller than 768px (mobile devices) */
   @media (max-width: 768px) {
     .navbar-links {
       display: none;
+      flex-direction: column;
+      width: 100%;
     }
   
-    .menu-icon {
+    .menu-toggle {
       display: block;
-      font-size: 1.8rem;
-      color: white;
-      cursor: pointer;
     }
-  }
   
-  @media (min-width: 769px) {
-    .menu-icon {
-      display: none;
+    .navbar-links.active {
+      display: flex;
     }
-  }
-  
-  /* Dropdown Menu for Mobile */
-  .navbar-links.mobile {
-    display: flex;
-    flex-direction: column;
-    background-color: #003366;
-    position: absolute;
-    top: 100%;
-    right: 0;
-    width: 100%;
-    text-align: center;
-    padding: 15px 0;
-  }
-  
-  .navbar-links.mobile a {
-    margin: 10px 0;
-    padding: 10px 0;
-    border-radius: 0;
   }
   
