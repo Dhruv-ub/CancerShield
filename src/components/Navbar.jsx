@@ -12,26 +12,47 @@ const Navbar = () => {
   return (
     <header className="navbar">
       <div className="navbar-container">
+        {/* Logo */}
         <NavLink to="/" className="logo">
           OralCare AI
         </NavLink>
+
+        {/* Hamburger Menu for Mobile */}
         <div className="hamburger" onClick={toggleMenu}>
           ☰
         </div>
+
+        {/* Navbar Links */}
         <nav className={`navbar-links ${isOpen ? "active" : ""}`}>
-          <NavLink to="/" activeClassName="active" exact onClick={toggleMenu}>
+          <NavLink to="/" exact activeClassName="active" onClick={toggleMenu}>
             Home
           </NavLink>
-          <NavLink to="/about" activeClassName="active" onClick={toggleMenu}>
+          <NavLink
+            to="/about"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             About Cancer
           </NavLink>
-          <NavLink to="/login" activeClassName="active" onClick={toggleMenu}>
+          <NavLink
+            to="/login"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Login
           </NavLink>
-          <NavLink to="/register" activeClassName="active" onClick={toggleMenu}>
+          <NavLink
+            to="/register"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Register
           </NavLink>
-          <NavLink to="/detect" activeClassName="active" onClick={toggleMenu}>
+          <NavLink
+            to="/detect"
+            activeClassName="active"
+            onClick={toggleMenu}
+          >
             Detect Cancer
           </NavLink>
         </nav>
