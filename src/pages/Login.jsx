@@ -1,18 +1,12 @@
-import React from 'react';
-import './Login.css';
+import React from "react";
+import "./Login.css";
 
 const Login = () => {
   return (
-    <section className="auth-form">
-      <h2>Login</h2>
-      <form>
-        <label>Email</label>
-        <input type="email" placeholder="Enter your email" />
-        <label>Password</label>
-        <input type="password" placeholder="Enter your password" />
-        <button className="btn primary" type="submit">Login</button>
-      </form>
-    </section>
+    <div className="login">
+      <h1>Login</h1>
+      <p>Access your account to use OralCare AI's features.</p>
+    </div>
   );
 };
 
