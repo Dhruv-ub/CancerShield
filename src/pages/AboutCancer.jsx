@@ -1,16 +1,15 @@
-import React from 'react';
-import './AboutCancer.css';
+import React from "react";
+import "./AboutCancer.css";
 
 const AboutCancer = () => {
   return (
-    <section className="about">
-      <h2>What is Oral Cancer?</h2>
+    <div className="about">
+      <h1>What is Oral Cancer?</h1>
       <p>
-        Oral cancer refers to cancer that develops in the tissues of the mouth
-        or throat. Early detection is critical for effective treatment, and our
-        AI-powered platform is here to assist.
+        Oral cancer develops in the tissues of the mouth or throat. Early
+        detection improves treatment outcomes.
       </p>
-    </section>
+    </div>
   );
 };
 
